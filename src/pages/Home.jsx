@@ -4,7 +4,7 @@ import "../css/home.css"
 
 const Home = () => {
 
-  const [name, setName] = useState('Player name')
+  const [name, setName] = useState('')
 
   const player = (event) => {
     setName(event.target.value)
@@ -20,7 +20,7 @@ const Home = () => {
         </div>
         
         <div className="name">
-          <input type="text" value={name} onChange={player} maxLength={16} />
+          <input type="text" value={name} onChange={player} maxLength={16} placeholder="Player name"/>
         </div>
 
         <div className="options">
