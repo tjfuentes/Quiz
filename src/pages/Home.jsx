@@ -5,11 +5,17 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
 
-  const [name, setName] = useState('')
+  const [name, setName] = useState('');
+  let playerName;
 
   const player = (event) => {
     setName(event.target.value)
-  }
+  };
+
+  const onPlay = () => {
+    playerName = name;
+    console.log(playerName);
+  };
 
   return (
     <>
@@ -25,7 +31,7 @@ const Home = () => {
         </div>
 
         <div className="options">
-          <Link to ="/"><button className="play">Play</button></Link>
+          <Link to ="/Game"><button className="play" onClick={onPlay}>Play</button></Link>
           <Link to ="/"><button>Options</button></Link>
           <Link to ="/LeaderBoard"><button>High Scores</button></Link>
         </div>
