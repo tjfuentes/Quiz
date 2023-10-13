@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../css/home.css"
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -24,9 +25,9 @@ const Home = () => {
         </div>
 
         <div className="options">
-          <button className="play">Play</button>
-          <button>Options</button>
-          <button>High Scores</button>
+          <Link to ="/"><button className="play">Play</button></Link>
+          <Link to ="/"><button>Options</button></Link>
+          <Link to ="/LeaderBoard"><button>High Scores</button></Link>
         </div>
       </main>
 

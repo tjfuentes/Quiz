@@ -1,14 +1,18 @@
+import Score from "./Score";
+import "../css/scoreboard.css"
 
 
-const Scoreboard = () => {
-
-  return(
+const ScoreBoard = () => {
+  return (
     <>
-      <section className="scoreboard">
-
-      </section>
+      <div className="leaderboard">
+        <h2>LeaderBoards</h2>
+        <section className="scoreboard">
+          <Score />
+        </section>
+      </div>
     </>
   )
 }
 
-export default Scoreboard;
+export default ScoreBoard;

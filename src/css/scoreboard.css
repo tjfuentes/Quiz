@@ -1,0 +1,56 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {  
+  font-family: 'Nosifer', cursive;
+}
+
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  min-height: 51vw;
+  position: relative;
+  
+}
+
+.leaderboard  h2 {
+  font-size: 5rem;
+  background: linear-gradient(to right, red,blue,yellow);
+  position: absolute;
+  top: 3%;
+}
+
+.scoreboard {
+  width: 50vw;
+  height: 70vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow-y: scroll;
+
+}
+
+.score {
+  width: 45vw;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;  
+  transform: translateY(90%);
+}
+
+.score h3 {
+  font-size: 1.5rem;
+}
+
+.score h4 {
+  font-size: 1.5rem;
+ 
+}

@@ -4,7 +4,11 @@ const Score = () => {
 
   return (
      <>
-      <div className="score"></div>
+      <div className="score">
+          <h3>Player 2</h3>
+          <h4>615 Points</h4>
+      </div>
+      
      </>
   )
 }
