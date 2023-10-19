@@ -6,13 +6,13 @@ import Game from "./components/Game"
 
 
 function App() {
-
+  let playerName;
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Game" element={<Game />} />
+          <Route path="/" element={<Home player={playerName} />} />
+          <Route path="/Game" element={<Game player={playerName} />} />
           <Route path="/Settings" element={<Options />} />
           <Route path="/Leaderboard" element={<ScoreBoard />} />
         </Routes>

@@ -1,7 +1,30 @@
+import { useEffect, useState } from "react";
 import "../css/game.css"
 
-const Game = () => {
+const Game = (props) => {
+  const [time, setTime] = useState(30);
+  const [score, setScore] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Decrease time by 1 second
+      setTime(prevTime => prevTime - 1);
+    }, 1000);
+
+    // Clear interval when time reaches 0
+    if (time === 0) {
+      clearInterval(interval);
+      console.log("Time's Up");
+    }
+
+    // Clean up interval on component unmount
+    return () => {
+      clearInterval(interval);
+    };
+  }, [time]);
+
+
+  const player = props.playerName;
   return(
     <>
       <main className="game-container">
@@ -14,7 +37,7 @@ const Game = () => {
           <h2>Question #1</h2>
         </div>
         <div className="question">
-          <h3>which of these is a type of monster found in minecraft?</h3>
+          <h3>which of these, is a type of monster found in minecraft?</h3>
         </div>
 
         <div className="choices">
@@ -28,9 +51,9 @@ const Game = () => {
           </div>
         </div>
         <div className="time-score">
-          <h5>Player 1</h5>
-          <h5>time: 30</h5>
-          <h5>Score: 600</h5>
+          <h5>{player}</h5>
+          <h5>Time: <span>{time}</span></h5>
+          <h5>Score: {score}</h5>
         </div>
       </main>
     </>

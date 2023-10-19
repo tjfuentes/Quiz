@@ -3,10 +3,11 @@ import "../css/home.css"
 import { Link } from "react-router-dom";
 
 
-const Home = () => {
+const Home = (props) => {
 
-  const [name, setName] = useState('');
-  let playerName;
+  const [name, setName] = useState('');  
+  let {playerName} = props;
+  playerName = name;
 
   const player = (event) => {
     setName(event.target.value)
@@ -14,9 +15,10 @@ const Home = () => {
 
   const onPlay = () => {
     playerName = name;
-    console.log(playerName);
+    console.log(playerName)
   };
 
+  
   return (
     <>
       <main className="home-container">

@@ -32,5 +32,49 @@
   padding: 2rem ;
   font-size: 1.5rem;
   margin-bottom: 5rem;
+  color: #F2CB00;
 }
+
+.question {
+  margin: 2rem;
+  padding: 1rem;
+  width: 80vw;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.choices {
+  margin: 5rem;
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+}
+
+.choices .left-side {
+  font-size: 2rem;
+}
+
+.choices .left-side h5 {
+  margin: 2rem;
+}
+
+.choices .right-side h5 {
+  margin: 2rem;
+}
+
+.choices .right-side {
+  font-size: 2rem;
+}
+
+.time-score h5 {
+  font-size: 1.5rem;
+}
+.time-score span {
+  color: #af9304;
+  font-size: 2rem;
+}
+
+
+
+
 
