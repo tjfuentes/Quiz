@@ -4,6 +4,7 @@ import "../css/game.css"
 const Game = (props) => {
   const [time, setTime] = useState(30);
   const [score, setScore] = useState(0);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
